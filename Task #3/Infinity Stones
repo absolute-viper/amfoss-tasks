@@ -1,0 +1,14 @@
+import sys
+times_to_repeat = int(input(''))  # no. of test cases
+while times_to_repeat >= 1:
+    n_m_k_list = (list(int(num) for num in input("").strip().split()))
+    n = (n_m_k_list[0])  # no. of Infinity Stones(N)
+    m = (n_m_k_list[1])  # no. of Boxes(M)
+    k = (n_m_k_list[2])  # no. of Boxes avengers can protect(K)
+    m_i_list = list(int(num) for num in input("").strip().split())[:m]  # stones in each box
+    m_s_list = list(int(num) for num in input("").strip().split())[:m]  # capacity of each box
+    if k >= m:
+        print("YES")
+        sys.exit()
+    sum1 = 0
+    for i in m_s_list:
