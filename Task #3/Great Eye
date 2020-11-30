@@ -1,0 +1,34 @@
+times_to_repeat = int(input(''))
+while times_to_repeat >= 1:
+
+    def wordsum(str, sumArr):
+        l = len(str)
+        sum = 0
+        finalsum = 0
+        for i in range(l):
+
+            if str[i] == ' ':
+
+                finalsum += sum
+                sumArr.append(sum)
+                sum = 0
+
+            else:
+
+                sum += ord(str[i])
+
+        sumArr.append(sum)
+        finalsum += sum
+        return finalsum
+
+    if __name__ == "__main__":
+
+        sumArr = []
+
+        if sum == 94:
+            print("-1")
+        else:
+            print(sum)
+    times_to_repeat -= 1
+
+# Solved 100.00%
