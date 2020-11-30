@@ -1,0 +1,22 @@
+times_to_repeat = int(input(''))
+while times_to_repeat in range(1, 1000):
+    def incredible(n):
+        if n < 0:
+            print("Incorrect input")
+    # First incredible number is 1
+        elif n == 1:
+            return 1
+    # Second incredible number is 2
+        elif n == 2:
+            return 2
+    # Third incredible number is 3
+        elif n == 3:
+            return 3
+        elif n > 3:
+            ans = (incredible(n-1) + incredible(n-2) + incredible(n-3))
+            print(type(ans))
+            return ans
+        else:
+            return ValueError
+    print(incredible(int(input(''))))
+    times_to_repeat -= 1
