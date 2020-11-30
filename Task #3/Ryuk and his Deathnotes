@@ -1,0 +1,9 @@
+n = int(input(""))  # types of pages for a single death note
+numList1 = list(int(num) for num in input("").strip().split())[:n]   # number of pages required
+
+numList2 = list(int(num) for num in input("").strip().split())[:n]   # number of pages available
+result = [i // j for i, j in zip(numList2, numList1)]
+
+print(min(result))
+
+# Completed 100.00 score
